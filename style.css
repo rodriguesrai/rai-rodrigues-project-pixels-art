@@ -4,3 +4,14 @@
     margin-right: 10px;
     display: inline-block;
 }
+
+#button-random-color {
+
+    padding: 50px;
+    color: white;
+    background-color: black;
+}
+
+.inline {
+    display: inline-block;
+}
