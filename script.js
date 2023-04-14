@@ -1,16 +1,10 @@
-
+const cores = document.getElementsByClassName('color');
 cores[0].style.backgroundColor = 'black';
-/* cores[1].style.backgroundColor = 'red';
-cores[2].style.backgroundColor = 'blue';
-cores[3].style.backgroundColor = 'pink'; */
-
-
-
-const cores = document.getElementsByClassName('color')
 
 let clickReset = document.getElementById('button-random-color');
 let mudaCores = (evento) => {
     for (let index = 1; index < cores.length; index++) {
+        let coresGeradas = [];
         let red = Math.floor(Math.random() * 256);
         let green = Math.floor(Math.random() * 256);
         let blue = Math.floor(Math.random() * 256);
@@ -18,8 +12,8 @@ let mudaCores = (evento) => {
             red = Math.floor(Math.random() * 256);
             green = Math.floor(Math.random() * 256);
             blue = Math.floor(Math.random() * 256);
-        } 
-    coresAtuais = [cores[index]]
+        }
+       
 
         cores[index].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     }
