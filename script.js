@@ -87,7 +87,7 @@ for (let pixel of selectPixel) {
     pixel.addEventListener('click', mudaPixel)
 }
 
-const buttonClear = document.getElementById('clear-board')
+const buttonClear = document.getElementById('clear-board') // requisito 11
 buttonClear.addEventListener('click', (event) => {
     for (let pixels of selectPixel) {
         pixels.style.backgroundColor = 'rgb(255, 255, 255';

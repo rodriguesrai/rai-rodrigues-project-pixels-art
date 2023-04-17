@@ -6,12 +6,17 @@
 }
 
 #button-random-color {
-
     padding: 50px;
     color: white;
     background-color: black;
 }
 
+#clear-board {
+    padding: 50px;
+    color: white;
+    background-color: black;
+    max-width: 50px;
+}
 .display {
     display: flex;
     display: inline-block;
