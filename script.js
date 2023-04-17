@@ -20,7 +20,7 @@ for (let index = 0; index < 25; index += 1) {
 }
 const corInicial = document.querySelectorAll('.pixel'); // requisito 7
 for (let index of corInicial) {
-    index.style.backgroundColor = 'rgb(255, 255, 255)'; 
+    index.style.backgroundColor = 'rgb(255, 255, 255)';
 }
 
 
@@ -71,11 +71,22 @@ const selectPaleta = (event) => {
     }
     event.target.classList.add('selected');
 
-   
+
 }
 for (index of chamaPaleta) {
     index.addEventListener('click', selectPaleta);
 }
+
+const selectPixel = document.getElementsByClassName('pixel')
+const mudaPixel = (event) => {
+    const selected = document.querySelector('.selected')
+    event.target.style.backgroundColor = selected.style.backgroundColor;
+}
+
+for (let pixel of selectPixel) {
+    pixel.addEventListener('click', mudaPixel)
+}
+
 
 
 
