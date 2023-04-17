@@ -12,6 +12,7 @@
     background-color: black;
 }
 
-.inline {
+.display {
+    display: flex;
     display: inline-block;
 }
