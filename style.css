@@ -18,6 +18,15 @@
 }
 
 #pixel-board {
- border: solid black 1px;
+    border: solid black 1px;
+    width: 210px;
+    height: 230px;
 
+}
+
+.pixel {
+    height: 40px;
+    width: 40px;
+    border: black solid 1px;
+    display: inline-block;
 }
