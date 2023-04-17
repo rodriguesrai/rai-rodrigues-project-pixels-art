@@ -9,15 +9,15 @@ let clickReset = document.getElementById('button-random-color');
 let coresGeradas = ['rgb(0, 0, 0)'];
 
 let geraCores = () => {
-    
+
     let novaCor = newRGB();
-    
+
     while (coresGeradas.includes(novaCor)) {
         novaCor = newRGB();
     }
 
- 
-   coresGeradas.push(novaCor);
+
+    coresGeradas.push(novaCor);
     return novaCor;
 }
 
@@ -36,12 +36,18 @@ const mudaCores = () => {
     for (let index = 1; index < cores.length; index += 1) {
         cores[index].style.backgroundColor = geraCores();
     }
-   
+    localStorage.setItem('colorPalette', JSON.stringify(coresGeradas));
 }
 
 clickReset.addEventListener('click', mudaCores);
 
+window.onload = () => {
+    let recoverySessionStorage = JSON.parse(localStorage.getItem('colorPalette'));
+    if (recoverySessionStorage != null) {
+        for (let index = 1; index < recoverySessionStorage.length; index += 1) {
+            cores[index].style.backgroundColor = recoverySessionStorage[index];
+        }
+    }
 
+}
 
-/* localStorage.setItem('colorPalette', JSON.stringify(coresGeradas));
-let recoverySessionStorage = localStorage.getItem('colorPalette', JSON.parse(coresGeradas)); */
