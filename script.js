@@ -77,7 +77,7 @@ for (index of chamaPaleta) {
     index.addEventListener('click', selectPaleta);
 }
 
-const selectPixel = document.getElementsByClassName('pixel')
+const selectPixel = document.getElementsByClassName('pixel') // requisito 10
 const mudaPixel = (event) => {
     const selected = document.querySelector('.selected')
     event.target.style.backgroundColor = selected.style.backgroundColor;
@@ -87,7 +87,12 @@ for (let pixel of selectPixel) {
     pixel.addEventListener('click', mudaPixel)
 }
 
-
+const buttonClear = document.getElementById('clear-board')
+buttonClear.addEventListener('click', (event) => {
+    for (let pixels of selectPixel) {
+        pixels.style.backgroundColor = 'rgb(255, 255, 255';
+    }
+})
 
 
 window.onload = () => {
