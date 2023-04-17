@@ -3,7 +3,7 @@ cores[0].style.backgroundColor = 'rgb(0, 0, 0)';
 cores[1].style.backgroundColor = 'rgb(0, 100, 1)';
 cores[2].style.backgroundColor = 'rgb(100, 0, 2)';
 cores[3].style.backgroundColor = 'rgb(0, 0, 100)';
-cores[0].classList.add('selected');
+cores[0].classList.add('selected'); // requisito 8
 
 
 let pixelBoard = document.createElement('div');
@@ -61,6 +61,24 @@ const mudaCores = () => {
 
 clickReset.addEventListener('click', mudaCores);
 
+
+let chamaPaleta = document.querySelectorAll('div.color'); //requisito 9
+
+const selectPaleta = (event) => {
+    for (let index = 0; index < chamaPaleta.length; index += 1) {
+        chamaPaleta[index].classList.remove('selected')
+
+    }
+    event.target.classList.add('selected');
+
+   
+}
+for (index of chamaPaleta) {
+    index.addEventListener('click', selectPaleta);
+}
+
+
+
 window.onload = () => {
     let recoverySessionStorage = JSON.parse(localStorage.getItem('colorPalette'));
     if (recoverySessionStorage != null) {
@@ -70,4 +88,3 @@ window.onload = () => {
     }
 
 }
-
