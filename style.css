@@ -16,3 +16,8 @@
     display: flex;
     display: inline-block;
 }
+
+#pixel-board {
+ border: solid black 1px;
+
+}
