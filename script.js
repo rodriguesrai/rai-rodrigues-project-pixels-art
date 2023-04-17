@@ -3,6 +3,7 @@ cores[0].style.backgroundColor = 'rgb(0, 0, 0)';
 cores[1].style.backgroundColor = 'rgb(0, 100, 1)';
 cores[2].style.backgroundColor = 'rgb(100, 0, 2)';
 cores[3].style.backgroundColor = 'rgb(0, 0, 100)';
+cores[0].classList.add('selected');
 
 
 let pixelBoard = document.createElement('div');
@@ -17,11 +18,11 @@ for (let index = 0; index < 25; index += 1) {
     divs.classList.add('pixel');
     guardaQuadros.appendChild(divs);
 }
-const corInicial = document.querySelectorAll('.pixel');
+const corInicial = document.querySelectorAll('.pixel'); // requisito 7
 for (let index of corInicial) {
     index.style.backgroundColor = 'rgb(255, 255, 255)'; 
 }
-/* corInicial.style.backgroundColor = 'rgb(255, 255, 255'; */
+
 
 let clickReset = document.getElementById('button-random-color');
 
