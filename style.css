@@ -17,21 +17,46 @@
     background-color: black;
     max-width: 50px;
 }
-.display {
+
+/* .display {
     display: flex;
     display: inline-block;
+} */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.paleta-container {
+    display: flex;
+    justify-content: center;
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+}
+
+#container-pixel {
+    display: flex;
+    justify-content: center;
+      
 }
 
 #pixel-board {
     border: solid black 1px;
-    width: 210px;
-    height: 230px;
-
+    width: 212px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .pixel {
     height: 40px;
     width: 40px;
     border: black solid 1px;
-    display: inline-block;
+    flex-grow: 1;
+    
+    
+    
 }

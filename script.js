@@ -5,14 +5,20 @@ cores[2].style.backgroundColor = 'rgb(100, 0, 2)';
 cores[3].style.backgroundColor = 'rgb(0, 0, 100)';
 cores[0].classList.add('selected'); // requisito 8
 
-
-let pixelBoard = document.createElement('div');
+const pixelBoard = document.createElement('div');// criando container dos pixels
 pixelBoard.id = 'pixel-board';
-let newPixelBoard = document.body;
+const newPixelBoard = document.body;
 newPixelBoard.appendChild(pixelBoard);
 
+const containerPixel = document.createElement('div'); // criando container para pixel board
+containerPixel.id = 'container-pixel';
+const selectPixelBoard = document.getElementById('pixel-board');
+selectPixelBoard.parentNode.insertBefore(containerPixel, selectPixelBoard);
+containerPixel.appendChild(selectPixelBoard);
+
+
 //requisito 6
-const guardaQuadros = document.getElementById('pixel-board')
+const guardaQuadros = document.getElementById('pixel-board');
 for (let index = 0; index < 25; index += 1) {
     let divs = document.createElement('div');
     divs.classList.add('pixel');
